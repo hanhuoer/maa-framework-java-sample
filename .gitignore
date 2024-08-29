@@ -302,7 +302,11 @@ fabric.properties
 # Android studio 3.1+ serialized cache file
 .idea/caches/build_file_checksums.ser
 
-resources/**
+resources/debug
+resources/maa
+resources/resource/README.md
+resources/resource/model/ca
+resources/resource/model/detect/jar.onnx
 debug/**
 config/**
 .nicegui/**

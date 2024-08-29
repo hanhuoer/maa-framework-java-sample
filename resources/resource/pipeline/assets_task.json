@@ -1,0 +1,51 @@
+{
+  "咸鱼简报": {
+    "next": [
+      "通用_检测并点击未激活的咸将菜单按钮_sub",
+      "咸鱼简报_检测并打开咸鱼简报_sub",
+      "通用_判断是否在主界面",
+      "咸鱼简报_检测并进入自定义任务",
+      "检测到停机维护"
+    ]
+  },
+  "咸鱼简报_检测并进入自定义任务": {
+    "recognition": "OCR",
+    "expected": [
+      "截图炫耀一下"
+    ],
+    "action": "Custom",
+    "custom_action": "AssetsReportAction",
+    "custom_action_param": {
+      "my_act_key": "my_act_value"
+    },
+    "next": [
+      "通用_判断是否在主界面",
+      "通用_检测并点击未激活的战斗菜单按钮_sub",
+      "咸鱼简报_检测并点击咸将_sub",
+      "咸鱼简报_检测并点击返回按钮_sub"
+    ]
+  },
+  "咸鱼简报_检测并打开咸鱼简报_sub": {
+    "is_sub": true,
+    "recognition": "OCR",
+    "expected": [
+      "咸鱼简报"
+    ],
+    "roi": [0, 942, 714, 338],
+    "action": "Click"
+  },
+  "咸鱼简报_检测并点击返回按钮_sub": {
+    "recognition": "TemplateMatch",
+    "template": "资源/资源_返回按钮.png",
+    "action": "Click",
+    "is_sub": true
+  },
+  "咸鱼简报_检测并点击咸将_sub": {
+    "is_sub": true,
+    "recognition": "OCR",
+    "expected": [
+      "咸将"
+    ],
+    "roi": [0, 1120, 716, 160]
+  }
+}

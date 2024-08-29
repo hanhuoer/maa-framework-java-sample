@@ -1,0 +1,332 @@
+{
+  "每日答题": {
+    "next": [
+      "判断是否答题结束",
+      "判断是否次数已用尽",
+      "判断是否正在答题_sub",
+      "检测并点击开始答题按钮_sub",
+      "判断是否在客厅界面并进入答题界面_sub",
+      "判断是否在主界面并进入客厅界面_sub",
+      "检测点击任意位置继续游戏并点击_sub",
+      "检测游戏充值并关闭_sub",
+      "检测游戏购买并关闭_sub",
+      "检测点击空白继续游戏并点击_sub",
+      "检测关闭图标并点击_sub",
+      "关闭通关失败蒙版_sub",
+      "检测立即前往并关闭_sub",
+      "检测到停机维护"
+    ]
+  },
+  "答题_领取任务奖励": {
+    "next": [
+      "答题_检测并点击任务列表_sub",
+      "答题_检测当前在任务列表页面",
+      "判断是否在客厅界面并进入答题界面_sub",
+      "判断是否在主界面并进入客厅界面_sub",
+      "检测点击任意位置继续游戏并点击_sub",
+      "检测游戏充值并关闭_sub",
+      "检测游戏购买并关闭_sub",
+      "检测点击空白继续游戏并点击_sub",
+      "检测关闭图标并点击_sub",
+      "关闭通关失败蒙版_sub",
+      "检测立即前往并关闭_sub",
+      "检测到停机维护"
+    ]
+  },
+  "答题_领取联动任务奖励": {
+    "next": [
+      "答题_检测并点击联动任务列表_sub",
+      "答题_检测当前在联动任务列表页面",
+      "判断是否在客厅界面并进入答题界面_sub",
+      "判断是否在主界面并进入客厅界面_sub",
+      "检测点击任意位置继续游戏并点击_sub",
+      "检测游戏充值并关闭_sub",
+      "检测游戏购买并关闭_sub",
+      "检测点击空白继续游戏并点击_sub",
+      "检测关闭图标并点击_sub",
+      "关闭通关失败蒙版_sub",
+      "检测立即前往并关闭_sub"
+    ]
+  },
+  "判断是否次数已用尽": {
+    "recognition": "OCR",
+    "expected": [
+      "今日挑战次数已用尽",
+      "剩余次数：0",
+      "剩余次数:0",
+      "剩余次数: 0"
+    ],
+    "next": [
+      "从答题界面回到客厅界面"
+    ]
+  },
+  "判断是否答题结束": {
+    "post_delay": 200,
+    "recognition": "OCR",
+    "expected": [
+      "确定"
+    ],
+    "action": "Click",
+    "next": [
+      "从答题界面回到客厅界面"
+    ]
+  },
+  "从答题界面回到客厅界面": {
+    "recognition": "TemplateMatch",
+    "template": "通用/返回按钮.png",
+    "action": "Click",
+    "next": [
+      "从客厅回到主界面"
+    ]
+  },
+  "从客厅回到主界面": {
+    "recognition": "TemplateMatch",
+    "template": "通用/客厅_厨房入口2.png",
+    "roi": [
+      15,
+      909,
+      705,
+      351
+    ],
+    "action": "Click",
+    "next": [
+      "检测是否回到主界面"
+    ]
+  },
+  "检测是否回到主界面": {
+    "recognition": "OCR",
+    "expected": "战斗",
+    "action": "StopTask"
+  },
+  "判断是否正在答题_sub": {
+    "recognition": "TemplateMatch",
+    "roi": [
+      0,
+      726,
+      131,
+      227
+    ],
+    "template": "答题/咸鱼大闯关_关闭.png",
+    "next": [
+      "检测并答题"
+    ],
+    "is_sub": true
+  },
+  "检测并答题": {
+    "is_sub": true,
+    "recognition": "OCR",
+    "roi": [
+      2,
+      3,
+      718,
+      651
+    ],
+    "action": "Custom",
+    "custom_action": "myAct"
+  },
+  "检测并点击开始答题按钮_sub": {
+    "is_sub": true,
+    "recognition": "OCR",
+    "roi": [
+      123,
+      940,
+      498,
+      219
+    ],
+    "action": "Click",
+    "expected": [
+      "开始答题",
+      "联通答题",
+      "答题"
+    ]
+  },
+  "判断是否在客厅界面并进入答题界面_sub": {
+    "pre_delay": 200,
+    "recognition": "TemplateMatch",
+    "roi": [
+      0,
+      992,
+      225,
+      288
+    ],
+    "template": "通用/客厅_厨房入口2.png",
+    "next": [
+      "进入答题界面"
+    ],
+    "is_sub": true
+  },
+  "进入答题界面": {
+    "pre_delay": 200,
+    "action": "Click",
+    "recognition": "TemplateMatch",
+    "roi": [
+      409,
+      292,
+      311,
+      435
+    ],
+    "template": [
+      "答题/客厅_答题入口2.png",
+      "答题/客厅_答题入口1.png",
+      "答题/客厅_答题入口3.png",
+      "答题/客厅_答题入口4.png",
+      "答题/客厅_答题入口5.png"
+    ],
+    "post_delay": 1000
+  },
+  "判断是否在主界面并进入客厅界面_sub": {
+    "recognition": "OCR",
+    "roi": [
+      271,
+      1131,
+      177,
+      148
+    ],
+    "expected": "战斗",
+    "next": [
+      "进入客厅界面"
+    ],
+    "is_sub": true
+  },
+  "进入客厅界面": {
+    "action": "Click",
+    "recognition": "TemplateMatch",
+    "roi": [
+      522,
+      867,
+      198,
+      259
+    ],
+    "timeout": 10000,
+    "timeout_next": [
+      "判断是否在主界面并进入客厅界面_sub"
+    ],
+    "template": [
+      "通用/战斗_客厅2.png",
+      "通用/战斗_客厅1.png",
+      "通用/战斗_客厅3.png"
+    ],
+    "post_delay": 1000
+  },
+  "答题_点击正确按钮": {
+    "action": "Click",
+    "recognition": "TemplateMatch",
+    "roi": [
+      77,
+      914,
+      258,
+      299
+    ],
+    "template": "答题/咸鱼大闯关_正确1.png",
+    "timeout": 10000,
+    "timeout_next": [
+      "判断是否答题结束"
+    ]
+  },
+  "答题_点击错误按钮": {
+    "action": "Click",
+    "recognition": "TemplateMatch",
+    "roi": [
+      379,
+      897,
+      308,
+      295
+    ],
+    "template": "答题/咸鱼大闯关_错误1.png",
+    "timeout": 10000,
+    "timeout_next": [
+      "判断是否答题结束"
+    ]
+  },
+  "答题_直接点击正确按钮": {
+    "action": "Click",
+    "target": [
+      193,
+      1030,
+      1,
+      1
+    ]
+  },
+  "答题_直接点击错误按钮": {
+    "action": "Click",
+    "target": [
+      498,
+      1030,
+      1,
+      1
+    ]
+  },
+
+  "答题_检测并点击任务列表_sub": {
+    "is_sub": true,
+    "recognition": "OCR",
+    "expected": [
+      "任务"
+    ],
+    "roi": [
+      0,
+      551,
+      274,
+      417
+    ],
+    "action": "Click",
+    "post_delay": 500
+  },
+  "答题_检测并点击联动任务列表_sub": {
+    "is_sub": true,
+    "recognition": "OCR",
+    "expected": [
+      "任务"
+    ],
+    "roi": [
+      506,
+      498,
+      214,
+      431
+    ],
+    "action": "Click",
+    "post_delay": 500
+  },
+  "答题_检测当前在任务列表页面": {
+    "recognition": "OCR",
+    "expected": [
+      "任务列表"
+    ],
+    "next": [
+      "检测点击任意位置继续游戏并点击_sub",
+      "答题_检测并点击任务领奖按钮_sub",
+      "答题_检测不到领取按钮"
+    ]
+  },
+  "答题_检测当前在联动任务列表页面": {
+    "recognition": "OCR",
+    "expected": [
+      "任务列表"
+    ],
+    "next": [
+      "检测点击任意位置继续游戏并点击_sub",
+      "答题_检测并点击任务领奖按钮_sub",
+      "答题_检测不到领取按钮"
+    ]
+  },
+  "答题_检测并点击任务领奖按钮_sub": {
+    "is_sub": true,
+    "recognition": "OCR",
+    "expected": [
+      "领取"
+    ],
+    "order_by": "Vertical",
+    "action": "Click"
+  },
+  "答题_检测不到领取按钮": {
+    "recognition": "OCR",
+    "expected": [
+      "领取"
+    ],
+    "inverse": true,
+    "next": [
+      "检测关闭图标并点击_sub",
+      "从答题界面回到客厅界面"
+    ]
+  }
+}

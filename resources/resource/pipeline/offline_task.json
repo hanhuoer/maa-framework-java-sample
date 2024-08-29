@@ -1,0 +1,139 @@
+{
+  "离线奖励_领取": {
+    "next": [
+      "离线奖励_检测并点击入口按钮",
+      "检测点击空白继续游戏并点击_sub",
+      "检测立即前往并关闭_sub",
+      "检测游戏充值并关闭_sub",
+      "检测游戏购买并关闭_sub",
+      "检测点击空白继续游戏并点击_sub",
+      "检测点击任意位置继续游戏并点击_sub",
+      "检测关闭图标并点击_sub",
+      "关闭通关失败蒙版_sub",
+      "检测到停机维护"
+    ]
+  },
+  "离线奖励_加钟": {
+    "next": [
+      "离线奖励_检测并点击入口按钮_sub",
+      "离线奖励_检测并点击升级提示_sub",
+      "离线奖励_检测并点击前往加钟按钮_sub",
+      "离线奖励_检测并点击助力按钮_sub",
+      "离线奖励_检测并点击关闭加钟弹框按钮",
+      "检测点击空白继续游戏并点击_sub",
+      "检测立即前往并关闭_sub",
+      "检测游戏充值并关闭_sub",
+      "检测游戏购买并关闭_sub",
+      "检测点击空白继续游戏并点击_sub",
+      "检测点击任意位置继续游戏并点击_sub",
+      "关闭通关失败蒙版_sub",
+      "检测到停机维护"
+    ]
+  },
+  "离线奖励_进入自定义任务": {
+    "action": "Custom",
+    "custom_action": "OfflineAction",
+    "custom_action_param": {
+      "my_act_key": "my_act_value"
+    }
+  },
+  "离线奖励_检测并点击入口按钮": {
+    "recognition": "TemplateMatch",
+    "roi": [
+      0,
+      158,
+      196,
+      453
+    ],
+    "action": "Click",
+    "template": [
+      "离线奖励/战斗_离线奖励入口_已满.png",
+      "离线奖励/战斗_离线奖励入口1.png",
+      "离线奖励/战斗_离线奖励入口2.png"
+    ],
+    "next": [
+      "离线奖励_检测并点击升级提示_sub",
+      "离线奖励_进入自定义任务"
+    ]
+  },
+  "离线奖励_检测并点击入口按钮_sub": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "roi": [
+      0,
+      158,
+      196,
+      453
+    ],
+    "action": "Click",
+    "template": [
+      "离线奖励/战斗_离线奖励入口_已满.png",
+      "离线奖励/战斗_离线奖励入口1.png",
+      "离线奖励/战斗_离线奖励入口2.png"
+    ]
+  },
+  "离线奖励_OCR": {
+    "recognition": "OCR"
+  },
+  "离线奖励_检测并点击前往加钟按钮_sub": {
+    "is_sub": true,
+    "recognition": "OCR",
+    "expected": [
+      "前往加钟"
+    ],
+    "action": "Click"
+  },
+  "离线奖励_检测并点击助力按钮_sub": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "roi": [114, 404, 486, 260],
+    "action": "Click",
+    "template": [
+      "离线奖励/离线奖励_加钟按钮1.png",
+      "离线奖励/离线奖励_加钟按钮.png"
+    ]
+  },
+  "离线奖励_检测并点击关闭加钟弹框按钮": {
+    "recognition": "TemplateMatch",
+    "roi": [41, 827, 651, 255],
+    "action": "Click",
+    "template": [
+      "离线奖励/离线奖励_加钟关闭按钮1.png",
+      "离线奖励/离线奖励_加钟关闭按钮.png"
+    ],
+    "next": [
+      "离线奖励_离开挂机奖励"
+    ]
+  },
+  "离线奖励_离开挂机奖励": {
+    "pre_delay": 200,
+    "times_limit": 3,
+    "target": [323, 1175, 67, 58],
+    "action": "Click"
+  },
+  "离线奖励_检测并点击升级提示_sub": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "roi": [365, 889, 300, 207],
+    "action": "Click",
+    "template": [
+      "离线奖励/离线奖励_升级提示.png"
+    ]
+  },
+  "离线奖励_检测红点1": {
+    "recognition": "NeuralNetworkDetect",
+    "roi": [365, 889, 300, 207],
+    "model": "fish_club.onnx",
+    "labels": ["App", "ButtonApplyAgree", "ButtonApplyIgnore", "ButtonApplyItem", "ButtonApplyItemInfo", "ButtonCancel", "ButtonClose", "ButtonClubApplyEntrance", "ButtonClubApplyWaitEntrance", "ButtonClubBreakUpEntrance", "ButtonClubEntrance", "ButtonClubInfoEmail", "ButtonClubInfoHelp", "ButtonClubInfoSetting", "ButtonClubInviteEntrance", "ButtonClubMemberEntrance", "ButtonClubSignedIn", "ButtonCommonBlue", "ButtonCommonGreen", "ButtonCommonGrey", "ButtonCommonRed", "ButtonCommonYellow", "ButtonConfirm", "ButtonDeleteMember", "ButtonImmediately", "ButtonKitchRoomEntrance", "ButtonOption", "ButtonOptionActive", "ButtonRoundCommonGreen", "ButtonRoundCommonGrey", "ButtonRoundCommonYellow", "ClubApplyListDialog", "ClubInfoEntrance", "ClubMemberDialog", "ClubMemberDialogTitle", "ClubTechEntrance", "ClubTitleSign", "DialogClubMemberItem", "DialogClubMemberItemInfo", "DialogDeleteMemberConfirm", "DialogDeleteMemberConfirmContent", "DialogMaintenance", "DialogMaintenanceConfirm", "DialogMaintenanceContent", "DialogRepeatedLogin", "DialogRepeatedLoginTitle", "HomeFightButtonActive", "MarkingTip", "PositionDeputyHead", "PositionHead", "PositionMember", "SlideUnlock", "TipRed"],
+    "cls_size": 53,
+    "expected": [52]
+  },
+  "检测并点击1": {
+    "action": "Click",
+    "recognition": "NeuralNetworkDetect",
+    "model": "yolov8n.onnx",
+    "cls_size": 80,
+    "labels": ["person", "bicycle", "car", "motorcycle", "airplane", "bus", "train", "truck", "boat", "traffic light", "fire hydrant", "stop sign", "parking meter", "bench", "bird", "cat", "dog", "horse", "sheep", "cow", "elephant", "bear", "zebra", "giraffe", "backpack", "umbrella", "handbag", "tie", "suitcase", "frisbee", "skis", "snowboard", "sports ball", "kite", "baseball bat", "baseball glove", "skateboard", "surfboard", "tennis racket", "bottle", "wine glass", "cup", "fork", "knife", "spoon", "bowl", "banana", "apple", "sandwich", "orange", "broccoli", "carrot", "hot dog", "pizza", "donut", "cake", "chair", "couch", "potted plant", "bed", "dining table", "toilet", "tv", "laptop", "mouse", "remote", "keyboard", "cell phone", "microwave", "oven", "toaster", "sink", "refrigerator", "book", "clock", "vase", "scissors", "teddy bear", "hair drier", "toothbrush"],
+    "expected": [0, 5]
+  }
+}

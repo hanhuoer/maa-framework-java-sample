@@ -1,0 +1,294 @@
+{
+  "检测进入主界面图标并点击": {
+    "recognition": "TemplateMatch",
+    "template": "通用/客厅_厨房入口2.png",
+    "roi": [
+      15,
+      909,
+      705,
+      351
+    ],
+    "green_mask": false,
+    "action": "Click",
+    "post_delay": 2000
+  },
+  "检测进入主界面图标并点击_sub": {
+    "recognition": "TemplateMatch",
+    "template": "通用/客厅_厨房入口2.png",
+    "roi": [
+      15,
+      909,
+      705,
+      351
+    ],
+    "green_mask": false,
+    "action": "Click",
+    "is_sub": true,
+    "post_delay": 2000
+  },
+  "检测返回图标并点击": {
+    "recognition": "TemplateMatch",
+    "template": "通用/返回按钮.png",
+    "green_mask": false,
+    "action": "Click"
+  },
+  "检测返回图标并点击_sub": {
+    "recognition": "TemplateMatch",
+    "template": "通用/返回按钮.png",
+    "green_mask": false,
+    "action": "Click",
+    "is_sub": true
+  },
+  "检测关闭图标并点击_sub": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "通用/关闭按钮1.png",
+      "通用/关闭按钮2.png",
+      "通用/关闭按钮3.png",
+      "通用/关闭按钮4.png"
+    ],
+    "green_mask": false,
+    "action": "Click",
+    "is_sub": true
+  },
+  "检测关闭图标并点击": {
+    "recognition": "TemplateMatch",
+    "template": [
+      "通用/关闭按钮1.png",
+      "通用/关闭按钮2.png",
+      "通用/关闭按钮3.png"
+    ],
+    "green_mask": true,
+    "action": "Click"
+  },
+  "检测确定按钮并点击": {
+    "recognition": "OCR",
+    "expected": "确定",
+    "action": "Click"
+  },
+  "检测确定按钮并点击_sub": {
+    "recognition": "OCR",
+    "expected": "确定",
+    "action": "Click",
+    "is_sub": true
+  },
+  "点击任意位置继续游戏": {
+    "recognition": "OCR",
+    "expected": "点击任意",
+    "action": "Click"
+  },
+  "检测点击任意位置继续游戏并点击_sub": {
+    "recognition": "OCR",
+    "expected": "点击任意",
+    "action": "Click",
+    "is_sub": true
+  },
+  "检测点击空白继续游戏并点击": {
+    "recognition": "OCR",
+    "expected": "点击空白",
+    "action": "Click"
+  },
+  "检测点击空白继续游戏并点击_sub": {
+    "recognition": "OCR",
+    "expected": "点击空白",
+    "action": "Click",
+    "is_sub": true
+  },
+  "关闭通关失败蒙版": {
+    "recognition": "OCR",
+    "expected": [
+      "通关失败",
+      "自动关闭"
+    ],
+    "roi": [
+      156,
+      381,
+      423,
+      688
+    ],
+    "action": "Click"
+  },
+  "关闭通关失败蒙版_sub": {
+    "recognition": "OCR",
+    "expected": [
+      "通关失败",
+      "自动关闭"
+    ],
+    "roi": [
+      156,
+      381,
+      423,
+      688
+    ],
+    "action": "Click",
+    "is_sub": true
+  },
+  "检测点击任意位置继续游戏并点击_5000_sub": {
+    "recognition": "OCR",
+    "expected": "点击任意",
+    "action": "Click",
+    "post_delay": 5000,
+    "is_sub": true
+  },
+  "检测是否在恭喜获得画面并继续": {
+    "recognition": "OCR",
+    "expected": [
+      "恭喜获得",
+      "奖励"
+    ],
+    "action": "Click",
+    "target": [
+      360,
+      1170,
+      46,
+      42
+    ]
+  },
+  "检测是否在恭喜获得画面并继续_sub": {
+    "recognition": "OCR",
+    "expected": [
+      "恭喜获得",
+      "奖励"
+    ],
+    "action": "Click",
+    "target": [
+      360,
+      1170,
+      46,
+      42
+    ],
+    "is_sub": true
+  },
+  "点击右下角_1000_sub": {
+    "action": "Click",
+    "target": [
+      1170,
+      643,
+      46,
+      42
+    ],
+    "post_delay": 1000,
+    "is_sub": true
+  },
+  "点击中心底部": {
+    "action": "Click",
+    "target": [
+      360,
+      1170,
+      46,
+      42
+    ]
+  },
+  "点击中心底部_sub": {
+    "action": "Click",
+    "target": [
+      360,
+      1170,
+      46,
+      42
+    ],
+    "is_sub": true
+  },
+  "点击中心底部_100": {
+    "action": "Click",
+    "target": [
+      360,
+      1170,
+      46,
+      42
+    ]
+  },
+  "点击中心底部_100_sub": {
+    "action": "Click",
+    "target": [
+      360,
+      1170,
+      46,
+      42
+    ],
+    "post_delay": 1000,
+    "is_sub": true
+  },
+  "点击隐私政策同意按钮": {
+    "action": "Click",
+    "recognition": "TemplateMatch",
+    "template": "隐私政策同意按钮.png",
+    "pre_delay": 200
+  },
+  "解锁屏幕": {
+    "action": "DoNothing",
+    "recognition": "TemplateMatch",
+    "template": "通用/锁屏_滑动解锁.png",
+    "pre_delay": 200,
+    "next": [
+      "do_解锁屏幕"
+    ]
+  },
+  "解锁屏幕2": {
+    "recognition": "OCR",
+    "expected": [
+      "滑动解锁"
+    ],
+    "pre_delay": 200,
+    "next": [
+      "do_解锁屏幕"
+    ]
+  },
+  "do_解锁屏幕": {
+    "action": "Swipe",
+    "begin": [
+      185,
+      1100,
+      10,
+      10
+    ],
+    "end": [
+      525,
+      1100,
+      10,
+      10
+    ]
+  },
+  "检测天宫顶部菜单并关闭": {
+    "recognition": "OCR",
+    "expected": [
+      "队伍等待",
+      "天官赐福"
+    ],
+    "next": [
+      "检测点击天宫顶部菜单关闭按钮"
+    ]
+  },
+  "检测点击天宫顶部菜单关闭按钮": {
+    "action": "Click",
+    "recognition": "TemplateMatch",
+    "template": "通用/天宫_顶部菜单_关闭按钮.png"
+  },
+  "通用_检测并点击未激活的战斗菜单按钮_sub": {
+    "is_sub": true,
+    "action": "Click",
+    "recognition": "TemplateMatch",
+    "template": "通用/战斗_底部菜单_战斗按钮未激活.png",
+    "roi": [0, 1120, 716, 160]
+  },
+  "通用_检测并点击未激活的咸将菜单按钮_sub": {
+    "is_sub": true,
+    "action": "Click",
+    "recognition": "TemplateMatch",
+    "template": "通用/战斗_底部菜单_咸将按钮未激活.png",
+    "roi": [0, 1120, 716, 160]
+  },
+  "测试_OCR": {
+    "recognition": "OCR"
+  },
+  "通用_判断是否在主界面": {
+    "recognition": "OCR",
+    "roi": [
+      271,
+      1131,
+      177,
+      148
+    ],
+    "expected": "战斗"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "检测客厅黄金罐子已占领并点击": {
+    "action": "Click",
+    "recognition": "FeatureMatch",
+    "template": "盐罐/盐罐_黄金盐罐1_占领中.png",
+    "green_mask": false,
+    "roi": [17, 663, 229, 253]
+  },
+  "检测客厅白银罐子已占领并点击": {
+    "action": "Click",
+    "recognition": "FeatureMatch",
+    "template": "盐罐/罐子_银_占领.png",
+    "green_mask": false,
+    "roi": [17, 663, 229, 253]
+  },
+  "检测客厅普通罐子已占领并点击": {
+    "action": "Click",
+    "recognition": "TemplateMatch",
+    "template": "盐罐/盐罐_普通盐罐_占领中.png",
+    "green_mask": false,
+    "roi": [17, 663, 229, 253]
+  },
+  "检测客厅黄金罐子可领取并点击": {
+    "action": "Click",
+    "recognition": "FeatureMatch",
+    "template": "盐罐/盐罐_黄金盐罐1_占领中.png",
+    "green_mask": false,
+    "roi": [17, 663, 229, 253]
+  },
+  "检测客厅白银罐子可领取并点击": {
+    "action": "Click",
+    "recognition": "FeatureMatch",
+    "template": "盐罐/罐子_银_可领取.png",
+    "green_mask": false,
+    "roi": [17, 663, 229, 253]
+  },
+  "检测客厅普通罐子可领取并点击": {
+    "action": "Click",
+    "recognition": "TemplateMatch",
+    "template": "盐罐/盐罐_普通盐罐_占领中.png",
+    "green_mask": false,
+    "roi": [17, 663, 229, 253]
+  }
+}

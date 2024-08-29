@@ -1,0 +1,33 @@
+{
+  "Task1": {
+    "action": "StartApp",
+    "package": "com.hortor.games.xyzw/com.hortorgames.gamesdk.common.LaunchActivity"
+  },
+  "Task2": {
+    "action": "Custom",
+    "custom_action": "myAct",
+    "custom_action_param": {
+      "ms": "hi"
+    }
+  },
+  "Task3": {
+    "recognition": "Custom",
+    "custom_recognition": "myReco",
+    "custom_recognition_param": {
+      "msg": "adsfasdf"
+    }
+  },
+  "Task4": {
+    "recognition": "OCR",
+    "action": "Custom",
+    "custom_action": "myAct"
+  },
+  "Task5": {
+    "recognition": "OCR",
+    "action": "Custom",
+    "custom_action": "记录奖励",
+    "custom_action_param": {
+      "source": "罐子"
+    }
+  }
+}

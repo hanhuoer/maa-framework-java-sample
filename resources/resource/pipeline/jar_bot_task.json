@@ -1,0 +1,82 @@
+{
+  "发条_检查": {
+    "next": [
+      "发条_检测并点击入口",
+      "判断是否在主界面并进入客厅界面_sub",
+      "检测点击任意位置继续游戏并点击_sub",
+      "检测游戏充值并关闭_sub",
+      "检测游戏购买并关闭_sub",
+      "检测点击空白继续游戏并点击_sub",
+      "检测关闭图标并点击_sub",
+      "关闭通关失败蒙版_sub",
+      "检测立即前往并关闭_sub",
+      "检测到停机维护"
+    ]
+  },
+  "发条_检测并点击入口": {
+    "recognition": "TemplateMatch",
+    "roi": [0, 679, 278, 346],
+    "action": "Click",
+    "template": [
+      "发条/发条_入口_已启动.png",
+      "发条/发条_入口_已暂停.png"
+    ],
+    "next": [
+      "发条_暂停_启动",
+      "发条_启动"
+    ]
+  },
+  "发条_暂停_启动": {
+    "recognition": "TemplateMatch",
+    "roi": [338, 215, 324, 254],
+    "action": "Click",
+    "template": [
+      "发条/发条_暂停.png"
+    ],
+    "next": [
+      "发条_启动"
+    ]
+  },
+  "发条_启动": {
+    "recognition": "TemplateMatch",
+    "roi": [338, 215, 324, 254],
+    "action": "Click",
+    "template": [
+      "发条/发条_启动.png"
+    ],
+    "next": [
+      "发条_离开"
+    ]
+  },
+  "发条_离开": {
+    "next": [
+      "从客厅回到主界面",
+      "发条_离开发条弹框_sub"
+    ]
+  },
+  "发条_离开发条弹框_sub": {
+    "is_sub": true,
+    "target": [291, 5, 148, 30],
+    "action": "Click",
+    "pre_delay": 200,
+    "times_limit": 1
+  },
+  "发条_检测并点击启动按钮_sub": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "roi": [338, 215, 324, 254],
+    "action": "Click",
+    "template": [
+      "发条/发条_启动.png"
+    ]
+  },
+  "发条_检测并点击暂停按钮_sub": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "roi": [338, 215, 324, 254],
+    "action": "Click",
+    "template": [
+      "发条/发条_暂停.png"
+    ]
+  }
+}

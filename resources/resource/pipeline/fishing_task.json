@@ -1,0 +1,110 @@
+{
+  "免费钓鱼": {
+    "next": [
+      "检测并点击钓鱼入口_sub",
+      "检测并点击免费普通捕获",
+      "钓鱼_检测到免费普通捕获倒计时",
+      "钓鱼_检测到未开启模鱼灵块",
+      "检测点击空白继续游戏并点击_sub",
+      "检测立即前往并关闭_sub",
+      "检测游戏充值并关闭_sub",
+      "检测游戏购买并关闭_sub",
+      "检测点击空白继续游戏并点击_sub",
+      "检测点击任意位置继续游戏并点击_sub",
+      "检测关闭图标并点击_sub",
+      "关闭通关失败蒙版_sub",
+      "判断是否在主界面并进入客厅界面_sub",
+      "没有找到免费普通捕获按钮_sub",
+      "检测到停机维护"
+    ]
+  },
+  "钓鱼_检测到未开启模鱼灵块": {
+    "recognition": "OCR",
+    "expected": [
+      "100关"
+    ],
+    "next": [
+      "从客厅回到主界面"
+    ]
+  },
+  "钓鱼_检测到免费普通捕获倒计时": {
+    "recognition": "OCR",
+    "roi": [2, 820, 401, 406],
+    "expected": [
+      "后免费"
+    ],
+    "next": [
+      "从钓鱼界面回到客厅界面"
+    ],
+    "action": "Custom",
+    "custom_action": "FishingCountDownAction",
+    "custom_action_param": {
+      "my_act_key": "my_act_value"
+    }
+  },
+  "检测并点击免费普通捕获": {
+    "recognition": "OCR",
+    "roi": [40, 853, 331, 330],
+    "action": "Custom",
+    "custom_action": "FishingAction",
+    "custom_action_param": {
+      "my_act_key": "my_act_value"
+    },
+    "expected": [
+      "免费领取"
+    ],
+    "target": [170, 960, 63, 39],
+    "next": [
+      "钓鱼_免费钓鱼后回到客厅界面"
+    ]
+  },
+  "没有找到免费普通捕获按钮_sub": {
+    "is_sub": true,
+    "recognition": "OCR",
+    "expected": "免费",
+    "inverse": true,
+    "roi": [37, 778, 297, 383]
+  },
+  "检测并点击钓鱼入口_sub": {
+    "is_sub": true,
+    "recognition": "TemplateMatch",
+    "roi": [0, 297, 249, 311],
+    "action": "Click",
+    "template": [
+      "钓鱼/客厅_钓鱼入口4.png",
+      "钓鱼/客厅_钓鱼入口6.png",
+      "钓鱼/客厅_钓鱼入口7.png",
+      "钓鱼/客厅_钓鱼入口8.png",
+      "钓鱼/客厅_钓鱼入口9.png",
+      "钓鱼/客厅_钓鱼入口10.png",
+      "钓鱼/客厅_钓鱼入口11.png"
+    ],
+    "pre_delay": 1500
+  },
+  "从钓鱼界面回到客厅界面": {
+    "recognition": "TemplateMatch",
+    "action": "Click",
+    "template": [
+      "钓鱼/客厅_钓鱼_背景.png",
+      "钓鱼/客厅_钓鱼_右侧框.png",
+      "钓鱼/客厅_钓鱼_左侧框.png"
+    ],
+    "next": [
+      "从客厅回到主界面"
+    ]
+  },
+  "钓鱼_免费钓鱼后回到客厅界面": {
+    "recognition": "OCR",
+    "roi": [85, 47, 566, 1136],
+    "action": "Click",
+    "expected": [
+      "奖励",
+      "恭喜获得",
+      "点击任意区域返回主界面"
+    ],
+    "next": [
+      "从钓鱼界面回到客厅界面",
+      "从客厅回到主界面"
+    ]
+  }
+}
