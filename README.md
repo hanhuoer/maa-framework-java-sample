@@ -6,23 +6,27 @@ maa framework java sample
 
 **免费钓鱼**
 
-[<img src="./public/免费钓鱼.mp4" width="50%">](./public/免费钓鱼.mp4 "Now in Android: 55")
+https://github.com/user-attachments/assets/d2b0a2a0-9e7c-44eb-9a07-182776df4654
 
 **发条检查**
 
-[<img src="./public/发条检查.mp4" width="50%">](./public/发条检查.mp4 "Now in Android: 55")
+https://github.com/user-attachments/assets/c2b3074e-97ca-408d-a3f2-c77954015cf7
 
 **每日答题**
 
-[<img src="./public/每日答题.mp4" width="50%">](./public/每日答题.mp4 "Now in Android: 55")
+https://github.com/user-attachments/assets/f8e8b629-ddde-4da1-9f6d-5565fd8676c2
 
 **离线奖励加钟**
 
-[<img src="./public/离线奖励加钟.mp4" width="50%">](./public/离线奖励加钟.mp4 "Now in Android: 55")
+https://github.com/user-attachments/assets/9da86ec8-dc44-4dfa-ac06-fc40e177fa8b
 
 **离线奖励领取**
 
-[<img src="./public/离线奖励领取.mp4" width="50%">](./public/离线奖励领取.mp4 "Now in Android: 55")
+https://github.com/user-attachments/assets/d26a0729-ccc9-4c9d-86be-743677dc0143
+
+
+
+
 
 
 
